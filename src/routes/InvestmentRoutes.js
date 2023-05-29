@@ -4,9 +4,7 @@ const investmentController = require('../controllers/investmentController');
 
 router
     .get("/", investmentController.getAllInvestors)
-    .get("/:userId", investmentController.getOneInvestor)
-    .post("/:userId", investmentController.createNewInvestor)
-    .patch("/:userId", investmentController.updateOneInvestor)
-    .delete("/:userId", investmentController.deleteOneInvestor);
+    .get("/invest/:userId", investmentController.getInvest)
+    .post("/invest/:userId", investmentController.createInvest);
 
 module.exports = router;

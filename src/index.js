@@ -4,8 +4,9 @@ const investmentsRoutes = require('./routes/InvestmentRoutes');
 const app = express();
 const PORT = process.env.PORT || 3500;
 
+app.use(express.json());
 app.use("/api/investments", investmentsRoutes);
 
 app.listen(PORT, () => { 
-    console.log(`Server listening on port ${PORT}`) 
+    console.log(`El servidor está corriendo en el puerto: ${PORT}`) 
 });

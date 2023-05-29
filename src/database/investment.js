@@ -5,6 +5,18 @@ const getAllInvestors = async () => {
     return result;
 };
 
+const getInvest = async (userId) => {     
+    result = await DBconnector.getInvest(userId);
+    return result;
+};
+
+const createInvest = async (userId, amount) => {     
+    result = await DBconnector.createInvest(userId, amount);
+    return result;
+};
+
 module.exports = {
-    getAllInvestors
+    getAllInvestors,
+    getInvest,
+    createInvest
 }

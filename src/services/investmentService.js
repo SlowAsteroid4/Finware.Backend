@@ -5,26 +5,18 @@ const getAllInvestors = async () => {
     return result;
 };
 
-const getOneInvestor = () => { 
-    return;
+const getInvest = async (userId) => { 
+    result = await investment.getInvest(userId)
+    return result;
 };
 
-const createNewInvestor = () => { 
-    return;
-};
-
-const updateOneInvestor = () => { 
-    return;
-};
-
-const deleteOneInvestor = () => { 
-    return;
+const createInvest = async (userId, amount) => { 
+    result = await investment.createInvest(userId, amount)
+    return result;
 };
 
 module.exports = {
     getAllInvestors,
-    getOneInvestor,
-    createNewInvestor,
-    updateOneInvestor,
-    deleteOneInvestor
+    getInvest,
+    createInvest
 }

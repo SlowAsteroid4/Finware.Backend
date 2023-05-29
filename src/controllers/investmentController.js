@@ -1,8 +1,8 @@
 const investmentService = require('../services/investmentService');
 
-const getAllInvestors = (req, res) => {
-    const allInvestors = investmentService.getAllInvestors();
-    res.send("Te doy todos los inversores");
+const getAllInvestors = async (req, res) => {
+    const allInvestors = await investmentService.getAllInvestors();
+    res.send(allInvestors);
 };
 
 const getOneInvestor = (req, res) => {

@@ -1,5 +1,8 @@
-const getAllInvestors = () => { 
-    return;
+const investment = require('../database/investment');
+
+const getAllInvestors = async () => { 
+    result = await investment.getAllInvestors()
+    return result;
 };
 
 const getOneInvestor = () => { 

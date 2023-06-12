@@ -9,4 +9,4 @@ CREATE TABLE nombre_tabla (
        apellidos VARCHAR(150) NOT NULL,
        rfc VARCHAR(13) NOT NULL,
        inversion DECIMAL(10, 2)
-     );
+     )
